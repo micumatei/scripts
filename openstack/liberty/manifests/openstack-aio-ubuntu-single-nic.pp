@@ -649,7 +649,7 @@ class { 'cinder::db::mysql':
 
 class { 'cinder::scheduler':
   enabled          => true,
-  scheduler_driver => 'cinder.scheduler.simple.SimpleScheduler',
+  scheduler_driver => 'cinder.scheduler.filter_scheduler.FilterScheduler', # here is the problem for volumes 
 }
 
 class { 'cinder::volume':
